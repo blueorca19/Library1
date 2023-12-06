@@ -1,15 +1,27 @@
 package domain;
 
+import domain.interfaces.Cart;
+import domain.interfaces.Customer;
+import domain.interfaces.Subscribe;
+
 import java.util.Objects;
 
-public class CommonCustomer {
+public class CommonCustomer implements Customer {
 
     private String name;
     private int clientNumber;
+    private Subscribe subscribe;
+    private boolean isActive;
+    private Cart cart;
 
-    public CommonCustomer(String name, int clientNumber) {
+
+    public CommonCustomer(String name, int clientNumber, Subscribe subscribe, Cart cart) {
         this.name = name;
         this.clientNumber = clientNumber;
+        this.subscribe = subscribe;
+        this.cart = cart;
+        this.isActive = true;
+
     }
 
     public String getName() {

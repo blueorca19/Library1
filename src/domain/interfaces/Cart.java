@@ -6,13 +6,15 @@ public interface Cart {
     int getId();
 
     List<Book> getBooks();
+
     boolean addBook(Book book);
+
     boolean deleteBook(int id);
+
     boolean deleteBook(String title);
 
-    double getTotalPrice();
+    double getPrice();
 
-    double getSubscribePrice();
 
     void clear();
 

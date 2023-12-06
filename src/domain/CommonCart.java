@@ -2,20 +2,27 @@ package domain;
 
 import domain.interfaces.Book;
 import domain.interfaces.Cart;
+import domain.interfaces.Subscribe;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
 
 public class CommonCart implements Cart {
 
     private int id;
-    private List<Book> books= new ArrayList<>();
+    private List<Book> books = new ArrayList<>();
 
-    public CommonCart(int id, List<Book> books) {
+    private Subscribe subscribe;
+
+    public CommonCart(int id, List<Book> books, Subscribe subscribe) {
         this.id = id;
         this.books = books;
+        this.subscribe = subscribe;
+
     }
+
 
     @Override
     public int getId() {
@@ -29,27 +36,37 @@ public class CommonCart implements Cart {
 
     @Override
     public boolean addBook(Book book) {
-        return false;
+        return books.add(book);
     }
 
     @Override
     public boolean deleteBook(int id) {
+        Iterator<Book> iterator = books.iterator();
+        while (iterator.hasNext()) {
+            if (iterator.next().getId() == id) {
+                iterator.remove();
+                return true;
+            }
+        }
         return false;
     }
 
     @Override
     public boolean deleteBook(String title) {
+        Iterator<Book> iterator = books.iterator();
+        while (iterator.hasNext()) {
+            if (iterator.next().getTitle().equals(title)) {
+                iterator.remove();
+                return true;
+            }
+        }
         return false;
     }
 
+    //todo Дописать методы
     @Override
-    public double getTotalPrice() {
-        return 0;
-    }
-
-    @Override
-    public double getSubscribePrice() {
-        return 0;
+    public double getPrice() {
+        return subscribe.getPrice();
     }
 
     @Override
