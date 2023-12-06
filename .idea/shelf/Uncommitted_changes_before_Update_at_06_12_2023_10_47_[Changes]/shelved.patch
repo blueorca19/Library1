@@ -7,44 +7,16 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 ===================================================================
 diff --git a/src/domain/interfaces/Book.java b/src/domain/interfaces/Book.java
 --- a/src/domain/interfaces/Book.java	(revision db58211a67e2da8d958122e62add6d74f4d21293)
-+++ b/src/domain/interfaces/Book.java	(date 1701855831097)
++++ b/src/domain/interfaces/Book.java	(date 1701855679607)
 @@ -1,4 +1,9 @@
  package domain.interfaces;
  
  public interface Book {
 +
-+    int getID();
-+    String getTitle();
-+    String getAutor();
-+    int getYear();
- }
-Index: src/domain/CommonBook.java
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
-<+>package domain;\r\n\r\npublic class CommonBook {\r\n}\r\n
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
-diff --git a/src/domain/CommonBook.java b/src/domain/CommonBook.java
---- a/src/domain/CommonBook.java	(revision db58211a67e2da8d958122e62add6d74f4d21293)
-+++ b/src/domain/CommonBook.java	(date 1701855961053)
-@@ -1,4 +1,17 @@
- package domain;
- 
- public class CommonBook {
-+    private int id;
-+    String Title;
-+    private String autor;
 +
-+    private int year;
-+    private boolean isActive;
 +
-+    public CommonBook(String title, String autor, int year) {
-+        Title = title;
-+        this.autor = autor;
-+        this.year = year;
-+        this.isActive = true;
-+    }
++
++
  }
 Index: .idea/misc.xml
 IDEA additional info:
@@ -55,12 +27,12 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 ===================================================================
 diff --git a/.idea/misc.xml b/.idea/misc.xml
 --- a/.idea/misc.xml	(revision db58211a67e2da8d958122e62add6d74f4d21293)
-+++ b/.idea/misc.xml	(date 1701856033273)
++++ b/.idea/misc.xml	(date 1701855427712)
 @@ -1,6 +1,6 @@
  <?xml version="1.0" encoding="UTF-8"?>
  <project version="4">
 -  <component name="ProjectRootManager" version="2" languageLevel="JDK_20" default="true" project-jdk-name="20" project-jdk-type="JavaSDK">
-+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="21" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_X" default="true" project-jdk-name="20" project-jdk-type="JavaSDK">
      <output url="file://$PROJECT_DIR$/out" />
    </component>
  </project>
