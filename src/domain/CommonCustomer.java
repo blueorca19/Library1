@@ -47,9 +47,9 @@ public class CommonCustomer implements Customer {
 
     @Override
     public String toString() {
-        return "Читатель {" +
-                "Имя " + name + '\'' +
-                ", Номер читательского билета =" + clientNumber +
+        return "Читатель: {" +
+                "Имя - " + name + '\'' +
+                ", Номер читательского билета - " + clientNumber +
                 '}';
     }
 }
