@@ -5,24 +5,25 @@ import domain.interfaces.Cart;
 import domain.interfaces.Subscribe;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
 
 public class CommonCart implements Cart {
 
     private int id;
-    private List<Book> books = new ArrayList<>();
+    private List<Book> books= new ArrayList<>();
 
     private Subscribe subscribe;
+
+    public Subscribe getSubscribe() {
+        return subscribe;
+    }
 
     public CommonCart(int id, List<Book> books, Subscribe subscribe) {
         this.id = id;
         this.books = books;
-        this.subscribe = subscribe;
-
+        this.subscribe= subscribe;
     }
-
 
     @Override
     public int getId() {
@@ -36,38 +37,24 @@ public class CommonCart implements Cart {
 
     @Override
     public boolean addBook(Book book) {
-        return books.add(book);
+        return false;
     }
 
     @Override
     public boolean deleteBook(int id) {
-        Iterator<Book> iterator = books.iterator();
-        while (iterator.hasNext()) {
-            if (iterator.next().getId() == id) {
-                iterator.remove();
-                return true;
-            }
-        }
         return false;
     }
 
     @Override
     public boolean deleteBook(String title) {
-        Iterator<Book> iterator = books.iterator();
-        while (iterator.hasNext()) {
-            if (iterator.next().getTitle().equals(title)) {
-                iterator.remove();
-                return true;
-            }
-        }
         return false;
     }
 
-    //todo Дописать методы
     @Override
-    public double getPrice() {
-        return subscribe.getPrice();
+    public Subscribe getPrice() {
+        return getSubscribe();
     }
+
 
     @Override
     public void clear() {

@@ -13,7 +13,7 @@ public interface Cart {
 
     boolean deleteBook(String title);
 
-    double getPrice();
+    Subscribe getPrice();
 
 
     void clear();
