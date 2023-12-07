@@ -16,10 +16,8 @@ public class CommonCart implements Cart {
 
     private Subscribe subscribe;
 
-    public CommonCart(int id, List<Book> books, Subscribe subscribe) {
+    public CommonCart(int id) {
         this.id = id;
-        this.books = books;
-        this.subscribe = subscribe;
 
     }
 

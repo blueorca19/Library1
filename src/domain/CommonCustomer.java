@@ -18,11 +18,13 @@ public class CommonCustomer implements Customer {
     public CommonCustomer(String name, int clientNumber, Subscribe subscribe, Cart cart) {
         this.name = name;
         this.clientNumber = clientNumber;
+        setClientNumber(clientNumber);
         this.subscribe = subscribe;
         this.subscribe.setActive(true);
         this.cart = cart;
         this.isActive = true;
     }
+
 
     public String getName() {
         return name;
@@ -30,6 +32,10 @@ public class CommonCustomer implements Customer {
 
     public int getClientNumber() {
         return clientNumber;
+    }
+
+    public void setClientNumber(int clientNumber) {
+        this.clientNumber = clientNumber;
     }
 
     @Override
