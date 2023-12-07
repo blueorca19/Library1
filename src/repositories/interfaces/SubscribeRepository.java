@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface SubscribeRepository {
     List<Subscribe> getAllSubscribes();
-  //  void addBook (int id, String title, String author, int year);
+    void addSubscribe (String name, double price, int term);
 
 
 }
