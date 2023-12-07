@@ -12,13 +12,13 @@ public class CommonBook implements Book {
     private int year;
     private boolean isActive;
 
-    public CommonBook(int id, String title, String author, int year) {
-        this.id = id;
+    public CommonBook(String title, String author, int year) {
         this.title = title;
         this.author = author;
         this.year = year;
         this.isActive = true;
     }
+
 
     @Override
     public int getId() {
@@ -43,6 +43,11 @@ public class CommonBook implements Book {
     @Override
     public boolean isActive() {
         return isActive;
+    }
+
+    @Override
+    public void setId(int id) {
+        this.id = id;
     }
 
     @Override

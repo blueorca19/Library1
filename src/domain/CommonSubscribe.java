@@ -19,6 +19,8 @@ public class CommonSubscribe implements Subscribe {
         this.isActive = false;
     }
 
+
+
     @Override
     public String getName() {
         return name;
@@ -39,7 +41,9 @@ public class CommonSubscribe implements Subscribe {
         return price;
     }
 
+    @Override
     public void setActive(boolean active) {
-        isActive = active;
+            this.isActive = active;
     }
+
 }

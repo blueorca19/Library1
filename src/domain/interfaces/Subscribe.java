@@ -10,5 +10,7 @@ public interface Subscribe {
 
     double getPrice();
 
+    void setActive(boolean active);
+
 
 }

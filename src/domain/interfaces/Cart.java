@@ -15,7 +15,6 @@ public interface Cart {
 
     double getPrice();
 
-
     void clear();
 
 

@@ -19,9 +19,9 @@ public class CommonCustomer implements Customer {
         this.name = name;
         this.clientNumber = clientNumber;
         this.subscribe = subscribe;
+        this.subscribe.setActive(true);
         this.cart = cart;
         this.isActive = true;
-
     }
 
     public String getName() {
