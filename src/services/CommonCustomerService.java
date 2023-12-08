@@ -1,12 +1,14 @@
 package services;
 
 import domain.interfaces.Book;
+import domain.interfaces.Customer;
 import domain.interfaces.Subscribe;
 import repositories.interfaces.BookRepository;
 import repositories.interfaces.CustomerRepository;
 import services.intefaces.CustomerService;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class CommonCustomerService implements CustomerService {
 
@@ -41,6 +43,8 @@ public class CommonCustomerService implements CustomerService {
       Book currentBook = bookRepository.getBookById(bookId);
       currentCustomer.getCart().addBook(currentBook);*/
 
+
+
     }
 
     @Override
@@ -74,18 +78,21 @@ public class CommonCustomerService implements CustomerService {
 
     @Override
     public void unsubscribeCustomer(int customerId) {
+        customerRepository.getClientById(customerId).getSubscribe().setActive(false);
 
     }
 
     @Override
     public double getRemainingSubscriptionTerm(int customerId) {
-        return 0;
+
+        return customerRepository.getClientById(customerId).getSubscribe().getTerm();
     }
 
     @Override
-    public int getSubscribedCustomerId(String subscribeName) {
-        return 0;
+    public List<Customer> getListSubscribedCustomer(Subscribe subscribe) {
+        return customerRepository.getAllCustomers().stream()
+                .filter(x->x.getSubscribe().equals(subscribe))
+                .collect(Collectors.toList());
+
     }
-
-
 }

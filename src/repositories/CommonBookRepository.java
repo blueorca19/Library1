@@ -9,9 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class CommonBookRepository implements BookRepository {
-
-    private Map<Integer, Book> books = new HashMap<>();
+public class CommonBookRepository implements BookRepository {private Map<Integer, Book> books = new HashMap<>();
 
     private int currentId;
 

@@ -4,7 +4,6 @@ import domain.interfaces.Book;
 import repositories.interfaces.BookRepository;
 import services.intefaces.BookService;
 
-import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -69,6 +68,8 @@ public class CommonBookService implements BookService {
                 .count();
     }
 
-
-
+    @Override
+    public void removeBook(int bookId) {
+         repository.removeBook(bookId);
+    }
 }

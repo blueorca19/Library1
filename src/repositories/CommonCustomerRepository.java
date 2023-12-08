@@ -26,10 +26,10 @@ public class CommonCustomerRepository implements CustomerRepository {
 
 
     public CommonCustomerRepository() {
-        addCustomer("client1", 1, 1);
-        addCustomer("client2", 2, 2);
-        addCustomer("client3", 0, 3);
-        addCustomer("client4", 1, 1);
+        addCustomer("klient1", 1,1);
+        addCustomer("klient2", 2,2);
+        addCustomer("klient3", 0,3);
+        addCustomer("klient4", 1,1);
     }
 
 
