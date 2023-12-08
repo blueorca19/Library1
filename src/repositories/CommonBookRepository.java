@@ -23,16 +23,25 @@ public class CommonBookRepository implements BookRepository {
         addBook("title5", "author5", 1995);
     }
 
-
     @Override
     public List<Book> getAllBooks() {
         return new ArrayList<>(books.values());
     }
-
     @Override
     public void addBook(String title, String author, int year) {
         Book book = new CommonBook(title, author, year);
         book.setId(++currentId);
         books.put(currentId, book);
     }
+
+    @Override
+    public void removeBook(int bookId) {
+        books.remove(bookId);
+    }
+
+    @Override
+    public Book getBookById(int bookId) {
+        return books.get(bookId);
+    }
+
 }

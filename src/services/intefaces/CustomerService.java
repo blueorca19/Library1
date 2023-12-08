@@ -9,7 +9,7 @@ import java.util.List;
 public interface CustomerService {
     void addCustomer(String customerName, int clientNumber, int subscribeId);
 
-    void addBookToCustomerCart(int customerId, int bookId); // для добавления книги в корзину покупателя.
+    void addBookToCustomerCart(int clientNumber, int bookId); // для добавления книги в корзину покупателя.
 
     List<Book> getCustomerCart(int customerId); // для получения списка книг в корзине покупателя.
 
@@ -20,7 +20,7 @@ public interface CustomerService {
 
     boolean isCustomerSubscribed(int customerId); // - для проверки, подписан ли покупатель на какой-либо тариф
 
-    void subscribeCustomer(int customerId, int subscribeId);// - для подписки покупателя на определенный тариф.
+    void subscribeCustomer(int customerId, Subscribe subscribe);// - для подписки покупателя на определенный тариф.
 
     void unsubscribeCustomer(int customerId); //- для отмены подписки у покупателя.
 

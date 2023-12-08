@@ -1,10 +1,8 @@
 package repositories;
 
-import domain.CommonBook;
 import domain.CommonCart;
 import domain.CommonCustomer;
 import domain.CommonSubscribe;
-import domain.interfaces.Book;
 import domain.interfaces.Cart;
 import domain.interfaces.Customer;
 import domain.interfaces.Subscribe;
@@ -18,6 +16,7 @@ import java.util.Map;
 public class CommonCustomerRepository implements CustomerRepository {
 
     private Map<Integer, Customer> customers = new HashMap<>();
+
     private List<Subscribe> subscribes = List.of(
             new CommonSubscribe("Moth", 150, 1),
             new CommonSubscribe("HalbYear", 550, 6),
@@ -26,19 +25,11 @@ public class CommonCustomerRepository implements CustomerRepository {
     private int clientNumber;
 
 
-    public CommonCustomerRepository(){
+    public CommonCustomerRepository() {
         addCustomer("client1", 1, 1);
         addCustomer("client2", 2, 2);
         addCustomer("client3", 0, 3);
         addCustomer("client4", 1, 1);
-    }
-
-    public Map<Integer, Customer> getCustomers() {
-        return customers;
-    }
-
-    public int getClientNumber() {
-        return clientNumber;
     }
 
 
@@ -47,6 +38,20 @@ public class CommonCustomerRepository implements CustomerRepository {
         Cart cart = new CommonCart(++clientNumber);
         Customer customer = new CommonCustomer(customerName, clientNumber, subscribes.get(subscribeId), cart);
         customers.put(clientNumber, customer);
+    }
 
+    @Override
+    public void removeCustomer(int clientNumber) {
+        customers.remove(clientNumber);
+    }
+
+    @Override
+    public Customer getClientById(int clientNumber) {
+        return customers.get(clientNumber);
+    }
+
+    @Override
+    public List<Customer> getAllCustomers() {
+        return new ArrayList<>(customers.values());
     }
 }

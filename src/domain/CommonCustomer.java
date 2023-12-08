@@ -34,6 +34,21 @@ public class CommonCustomer implements Customer {
         return clientNumber;
     }
 
+    @Override
+    public Cart getCart() {
+        return cart;
+    }
+
+    @Override
+    public Subscribe getSubscribe() {
+        return subscribe;
+    }
+
+    @Override
+    public void setSubscribe(Subscribe subscribe) {
+        this.subscribe = subscribe;
+    }
+
     public void setClientNumber(int clientNumber) {
         this.clientNumber = clientNumber;
     }
