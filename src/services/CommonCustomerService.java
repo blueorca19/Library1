@@ -1,5 +1,6 @@
 package services;
 
+import domain.interfaces.Book;
 import domain.interfaces.Subscribe;
 import repositories.interfaces.CustomerRepository;
 import services.intefaces.CustomerService;
@@ -28,6 +29,51 @@ public class CommonCustomerService implements CustomerService {
             throw new IllegalArgumentException("Subscribe's ID cannot be empty");
         }
         repository.addCustomer(customerName, clientNumber, subscribeId);
+    }
+
+    @Override
+    public void addBookToCustomerCart(int customerId, int bookId) {
+
+    }
+
+    @Override
+    public List<Book> getCustomerCart(int customerId) {
+        return null;
+    }
+
+    @Override
+    public boolean isCustomerCartEmpty(int customerId) {
+        return false;
+    }
+
+    @Override
+    public void clearCustomerCart(int customerId) {
+
+    }
+
+    @Override
+    public boolean isCustomerSubscribed(int customerId) {
+        return false;
+    }
+
+    @Override
+    public void subscribeCustomer(int customerId, int subscribeId) {
+
+    }
+
+    @Override
+    public void unsubscribeCustomer(int customerId) {
+
+    }
+
+    @Override
+    public double getRemainingSubscriptionTerm(int customerId) {
+        return 0;
+    }
+
+    @Override
+    public int getSubscribedCustomerId(String subscribeName) {
+        return 0;
     }
 
 

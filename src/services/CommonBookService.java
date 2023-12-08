@@ -4,6 +4,7 @@ import domain.interfaces.Book;
 import repositories.interfaces.BookRepository;
 import services.intefaces.BookService;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -36,4 +37,36 @@ public class CommonBookService implements BookService {
                 .filter(x -> x.isActive())
                 .collect(Collectors.toList());
     }
+
+    @Override
+    public List<Book> getAllBooksByTitle(String title) {
+        return repository.getAllBooks()
+                .stream()
+                .filter(x -> x.getTitle().equals(title))
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<Book> getAllBooksByAuthor(String author) {
+        return repository.getAllBooks()
+                .stream()
+                .filter(x -> x.getAuthor().equals(author))
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<Book> getAllBooksByYear(int year) {
+        return repository.getAllBooks()
+                .stream()
+                .filter(x -> x.getYear() == year)
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public int getBookCount() {
+        return (int) repository.getAllBooks()
+                .stream()
+                .count();
+    }
+
 }
