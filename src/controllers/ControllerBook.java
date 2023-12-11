@@ -13,6 +13,7 @@ public class ControllerBook {
         this.service = service;
     }
 
+
     public void addBook() {
         try {
             Scanner scanner = new Scanner(System.in);
@@ -29,6 +30,15 @@ public class ControllerBook {
         }
     }
 
+    public List<Book> getAllBooks() {
+        try {
+            System.out.println("Вывод всех книг:");
+            System.out.println(service.getAllBooks());
+            return service.getAllBooks();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
 
 
     public List<Book> getAllActiveBooks() {
@@ -41,19 +51,19 @@ public class ControllerBook {
         }
     }
 
-    public List<Book> getAllBooksByTitle(){
-        try{
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите название книги для поиска: ");
-        String title = scanner.nextLine();
-        return service.getAllBooksByTitle(title);
+    public List<Book> getAllBooksByTitle() {
+        try {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Введите название книги для поиска: ");
+            String title = scanner.nextLine();
+            return service.getAllBooksByTitle(title);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
 
     public List<Book> getAllBooksByAuthor() {
-        try{
+        try {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Введите автора книги для поиска: ");
             String author = scanner.nextLine();
@@ -64,7 +74,7 @@ public class ControllerBook {
     }
 
     public List<Book> getAllBooksByYear() {
-        try{
+        try {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Введите год книги для поиска: ");
             int year = Integer.parseInt(scanner.nextLine());
@@ -72,7 +82,6 @@ public class ControllerBook {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-
     }
 
     public int getBookCount() {

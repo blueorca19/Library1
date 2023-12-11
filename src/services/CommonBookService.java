@@ -30,6 +30,11 @@ public class CommonBookService implements BookService {
     }
 
     @Override
+    public List<Book> getAllBooks() {
+        return repository.getAllBooks();
+    }
+
+    @Override
     public List<Book> getAllActiveBooks() {
          return repository.getAllBooks()
                 .stream()

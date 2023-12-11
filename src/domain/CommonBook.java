@@ -71,6 +71,6 @@ public class CommonBook implements Book {
                 ", Автор ='" + author + '\'' +
                 ", Год =" + year +
                 ", Наличие =" + isActive +
-                '}';
+                '}' + "\n";
     }
 }

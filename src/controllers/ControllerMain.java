@@ -26,21 +26,24 @@ public class ControllerMain {
                             controllerBook.addBook();
                             break;
                         case 2:
-                            result.addAll(controllerBook.getAllActiveBooks());
+                            result.addAll(controllerBook.getAllBooks());
                             break;
                         case 3:
-                            result.addAll(controllerBook.getAllBooksByTitle());
+                            result.addAll(controllerBook.getAllActiveBooks());
                             break;
                         case 4:
-                            result.addAll(controllerBook.getAllBooksByAuthor());
+                            result.addAll(controllerBook.getAllBooksByTitle());
                             break;
                         case 5:
-                            result.addAll(controllerBook.getAllBooksByYear());
+                            result.addAll(controllerBook.getAllBooksByAuthor());
                             break;
                         case 6:
-                            result.add(controllerBook.getBookCount());
+                            result.addAll(controllerBook.getAllBooksByYear());
                             break;
                         case 7:
+                            result.add(controllerBook.getBookCount());
+                            break;
+                        case 8:
                             controllerBook.removeBook();
                             break;
                     }
