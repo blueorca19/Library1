@@ -1,11 +1,12 @@
 package repositories.interfaces;
 
 import domain.interfaces.Customer;
+import domain.interfaces.Subscribe;
 
 import java.util.List;
 
 public interface CustomerRepository {
-    void addCustomer(String customerName, int clientNumber, int subscribeId);
+    void addCustomer(String customerName, int subscribeId);
 
     void removeCustomer(int clientNumber);
 
@@ -13,6 +14,7 @@ public interface CustomerRepository {
 
     List<Customer> getAllCustomers();
 
+    Subscribe getSubscribeById(int subscribeId);
 
 
 }

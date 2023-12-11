@@ -21,18 +21,15 @@ public class CommonCustomerService implements CustomerService {
         this.bookRepository = bookRepository;
     }
 
-    public void addCustomer(String customerName, int clientNumber, int subscribeId) {
+    public void addCustomer(String customerName, int subscribeId) {
         if (customerName == null || customerName.isEmpty()) {
             throw new IllegalArgumentException("Name cannot be empty");
-        }
-        if (clientNumber <= 0) {
-            throw new IllegalArgumentException("Number's client cannot be empty");
         }
 
         if (subscribeId <= 0) {
             throw new IllegalArgumentException("Subscribe's ID cannot be empty");
         }
-        customerRepository.addCustomer(customerName, clientNumber, subscribeId);
+        customerRepository.addCustomer(customerName, subscribeId);
     }
 
     @Override
@@ -71,8 +68,8 @@ public class CommonCustomerService implements CustomerService {
     }
 
     @Override
-    public void subscribeCustomer(int customerId, Subscribe subscribe) {
-        customerRepository.getClientById(customerId).setSubscribe(subscribe);
+    public void subscribeCustomer(int customerId, int subscribeId) {
+        customerRepository.getClientById(customerId).setSubscribe(customerRepository.getSubscribeById(subscribeId));
 
     }
 
@@ -89,10 +86,11 @@ public class CommonCustomerService implements CustomerService {
     }
 
     @Override
-    public List<Customer> getListSubscribedCustomer(Subscribe subscribe) {
+    public List<Customer> getListSubscribedCustomer(int subscribeId) {
         return customerRepository.getAllCustomers().stream()
-                .filter(x->x.getSubscribe().equals(subscribe))
+                .filter(x->x.getSubscribe().equals(customerRepository.getSubscribeById(subscribeId)))
                 .collect(Collectors.toList());
 
     }
+
 }

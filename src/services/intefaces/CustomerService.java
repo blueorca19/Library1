@@ -8,7 +8,7 @@ import domain.interfaces.Subscribe;
 import java.util.List;
 
 public interface CustomerService {
-    void addCustomer(String customerName, int clientNumber, int subscribeId);
+    void addCustomer(String customerName, int subscribeId);
 
     void addBookToCustomerCart(int clientNumber, int bookId); // для добавления книги в корзину покупателя.
 
@@ -21,12 +21,13 @@ public interface CustomerService {
 
     boolean isCustomerSubscribed(int customerId); // - для проверки, подписан ли покупатель на какой-либо тариф
 
-    void subscribeCustomer(int customerId, Subscribe subscribe);// - для подписки покупателя на определенный тариф.
+    void subscribeCustomer(int customerId, int subscribeId);// - для подписки покупателя на определенный тариф.
 
     void unsubscribeCustomer(int customerId); //- для отмены подписки у покупателя.
 
     double getRemainingSubscriptionTerm(int customerId);// - для получения оставшегося срока действия подписки у покупателя.
 
-    List<Customer> getListSubscribedCustomer(Subscribe subscribe); //- для получения листа  покупателей, подписанного на определенный тариф.
+    List<Customer> getListSubscribedCustomer(int customerId); //- для получения листа  покупателей, подписанного на определенный тариф.
+
 }
 

@@ -26,15 +26,15 @@ public class CommonCustomerRepository implements CustomerRepository {
 
 
     public CommonCustomerRepository() {
-        addCustomer("klient1", 1,1);
-        addCustomer("klient2", 2,2);
-        addCustomer("klient3", 0,3);
-        addCustomer("klient4", 1,1);
+        addCustomer("klient1", 1);
+        addCustomer("klient2", 2);
+        addCustomer("klient3", 0);
+        addCustomer("klient4", 1);
     }
 
 
     @Override
-    public void addCustomer(String customerName, int clientNumber, int subscribeId) {
+    public void addCustomer(String customerName, int subscribeId) {
         Cart cart = new CommonCart(++clientNumber);
         Customer customer = new CommonCustomer(customerName, clientNumber, subscribes.get(subscribeId), cart);
         customers.put(clientNumber, customer);
@@ -53,5 +53,10 @@ public class CommonCustomerRepository implements CustomerRepository {
     @Override
     public List<Customer> getAllCustomers() {
         return new ArrayList<>(customers.values());
+    }
+
+    @Override
+    public Subscribe getSubscribeById(int subscribeId) {
+        return subscribes.get(subscribeId) ;
     }
 }
