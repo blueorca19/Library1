@@ -13,7 +13,7 @@ public class CommonBookRepository implements BookRepository {private Map<Integer
 
     private int currentId;
 
-    public CommonBookRepository() {
+    public CommonBookRepository() { //TODO!! смотри строчку 27. мы к этому метожу нигде не обращаемся и не можем вытащить список кнг
         addBook("title1", "author1", 1991);
         addBook("title2", "author2", 1992);
         addBook("title3", "author3", 1993);
@@ -24,7 +24,7 @@ public class CommonBookRepository implements BookRepository {private Map<Integer
 
     @Override
     public List<Book> getAllBooks() {
-        return new ArrayList<>(books.values());
+        return new ArrayList<>(books.values()); //TODO!!! мы не обращаеимся к методу
     }
     @Override
     public void addBook(String title, String author, int year) {
