@@ -41,13 +41,39 @@ public class Application {
                                 "3. Получить список книг по названию. \n" +
                                 "4. Получить список книг по автору. \n" +
                                 "5. Получить список книг по году. \n" +
-                                "6. Получить количество книг.\n"+
+                                "6. Получить количество книг.\n" +
                                 "7. Удалить книгу по id. ");
-
+                        int operationNum = Integer.parseInt(scanner.nextLine());
+                        controllerMain.sendRequest(objectNum + " " + operationNum).forEach(System.out::println);
+                        break;
+                    case 2:
+                        System.out.println(" Выберете операцию: \n" +
+                                "1. Добавить клиента. \n " +
+                                "2. Добавить книгу в корзину клиента. \n " +
+                                "3. Получить список книг, которые лежат в корзине. \n" +
+                                "4. Проверить корзину клиента на пустоту. \n" +
+                                "5. Очистить корзину клиента. \n" +
+                                "6. Получить сведения о подписках клиента.\n" +
+                                "7. Проверить подписку на определенный тариф. \n " +
+                                "8. Отменить подписку у клиента. \n " +
+                                "9. Получить срок действия оставшейся подписки. \n " +
+                                "10.Получить список клиентов по определенному тарифу подписки.  ");
+                        int operationNum1 = Integer.parseInt(scanner.nextLine());
+                        controllerMain.sendRequest(objectNum + " " + operationNum1).forEach(System.out::println);
+                        break;
+                    case 0:
+                        return;
+                    default:
+                        System.out.println("Некорректный ввод");
+                        break;
                 }
-            }
+            } catch (Exception e) {
+                System.out.println("Ошибка! ");
 
+            }
         }
 
     }
+
 }
+

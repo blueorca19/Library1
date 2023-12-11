@@ -21,6 +21,7 @@ public class CommonBookRepository implements BookRepository {private Map<Integer
         addBook("title5", "author5", 1995);
     }
 
+
     @Override
     public List<Book> getAllBooks() {
         return new ArrayList<>(books.values());

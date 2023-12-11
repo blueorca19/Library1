@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d08b9fcc-4f1d-4c3f-8bd0-7eb20247ae15" name="Changes" comment="update Customer CommonCustomer by Anastasiia">
-      <change afterPath="$PROJECT_DIR$/src/application/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/ControllerMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ControllerMain.java" afterDir="false" />
+    <list default="true" id="d08b9fcc-4f1d-4c3f-8bd0-7eb20247ae15" name="Changes" comment="update Customer CommonCustomer by Anastasiia2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/CommonBookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/CommonBookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/CommonBookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/CommonBookService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +45,26 @@
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="application.Application" />
+      <module name="Library" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="application.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Application" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -68,7 +90,23 @@
       <option name="project" value="LOCAL" />
       <updated>1702291258416</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update Customer CommonCustomer by Anastasiia2">
+      <option name="closed" value="true" />
+      <created>1702295744809</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1702295744809</updated>
+    </task>
+    <task id="LOCAL-00004" summary="update Customer CommonCustomer by Anastasiia2">
+      <option name="closed" value="true" />
+      <created>1702295760350</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1702295760350</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -85,6 +123,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
     <MESSAGE value="update Customer CommonCustomer by Anastasiia" />
-    <option name="LAST_COMMIT_MESSAGE" value="update Customer CommonCustomer by Anastasiia" />
+    <MESSAGE value="update Customer CommonCustomer by Anastasiia2" />
+    <option name="LAST_COMMIT_MESSAGE" value="update Customer CommonCustomer by Anastasiia2" />
   </component>
 </project>

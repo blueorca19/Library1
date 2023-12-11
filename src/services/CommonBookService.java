@@ -31,7 +31,7 @@ public class CommonBookService implements BookService {
 
     @Override
     public List<Book> getAllActiveBooks() {
-        return repository.getAllBooks()
+         return repository.getAllBooks()
                 .stream()
                 .filter(x -> x.isActive())
                 .collect(Collectors.toList());
