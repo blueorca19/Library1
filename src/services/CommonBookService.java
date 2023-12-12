@@ -31,6 +31,7 @@ public class CommonBookService implements BookService {
 
     @Override
     public List<Book> getAllBooks() {
+
         return repository.getAllBooks();
     }
 
@@ -46,7 +47,7 @@ public class CommonBookService implements BookService {
     public List<Book> getAllBooksByTitle(String title) {
         return repository.getAllBooks()
                 .stream()
-                .filter(x -> x.getTitle().equals(title))
+                .filter(x -> x.getTitle().contains(title))
                 .collect(Collectors.toList());
     }
 
@@ -54,7 +55,7 @@ public class CommonBookService implements BookService {
     public List<Book> getAllBooksByAuthor(String author) {
         return repository.getAllBooks()
                 .stream()
-                .filter(x -> x.getAuthor().equals(author))
+                .filter(x -> x.getAuthor().contains(author))
                 .collect(Collectors.toList());
     }
 
@@ -75,6 +76,7 @@ public class CommonBookService implements BookService {
 
     @Override
     public void removeBook(int bookId) {
-         repository.removeBook(bookId);
+
+        repository.removeBook(bookId);
     }
 }

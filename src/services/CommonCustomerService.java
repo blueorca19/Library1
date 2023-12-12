@@ -26,7 +26,7 @@ public class CommonCustomerService implements CustomerService {
             throw new IllegalArgumentException("Name cannot be empty");
         }
 
-        if (subscribeId <= 0) {
+        if (subscribeId < 0) {
             throw new IllegalArgumentException("Subscribe's ID cannot be empty");
         }
         customerRepository.addCustomer(customerName, subscribeId);
@@ -34,13 +34,15 @@ public class CommonCustomerService implements CustomerService {
 
     @Override
     public void addBookToCustomerCart(int clientNumber, int bookId) {
-        customerRepository.getClientById(clientNumber).getCart().addBook(bookRepository.getBookById(bookId));
+        if (clientNumber < 0) {
+            throw new IllegalArgumentException("Client's number cannot be null");
+        }
 
-     /* Customer currentCustomer = customerRepository.getClientById(clientNumber);
-      Book currentBook = bookRepository.getBookById(bookId);
-      currentCustomer.getCart().addBook(currentBook);*/
-
-
+        if (bookId < 0) {
+            throw new IllegalArgumentException("Book's ID cannot be null");
+        }
+        customerRepository.getClientById(clientNumber).getCart()
+                .addBook(bookRepository.getBookById(bookId));
 
     }
 

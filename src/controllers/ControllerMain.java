@@ -47,8 +47,9 @@ public class ControllerMain {
                             controllerBook.removeBook();
                             break;
                     }
+                    break;
                 case 2:
-                    switch (objectNum) {
+                    switch (operationNum) {
                         case 1:
                             controllerCustomer.addCustomer();
                             break;

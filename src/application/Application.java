@@ -27,7 +27,7 @@ public class Application {
 
         Scanner scanner = new Scanner(System.in);
         while (true) {
-            System.out.println("Выберете объект: \n" +
+            System.out.println("Выберите объект: \n" +
                     "1. Книги. \n" +
                     "2. Клиент. \n" +
                     "0. Завершение работы.");
@@ -35,7 +35,7 @@ public class Application {
                 int objectNum = Integer.parseInt(scanner.nextLine());
                 switch (objectNum) {
                     case 1:
-                        System.out.println(" Выберете операцию: \n" +
+                        System.out.println(" Выберите операцию: \n" +
                                 "1. Добавить книгу. \n" +
                                 "2. Получить список всех книг. \n" +
                                 "3. Получить список активных книг. \n" +
@@ -48,7 +48,7 @@ public class Application {
                         controllerMain.sendRequest(objectNum + " " + operationNum).forEach(System.out::println);
                         break;
                     case 2:
-                        System.out.println(" Выберете операцию: \n" +
+                        System.out.println(" Выберите операцию: \n" +
                                 "1. Добавить клиента. \n" +
                                 "2. Добавить книгу в корзину клиента. \n" +
                                 "3. Получить список книг, которые лежат в корзине. \n" +
