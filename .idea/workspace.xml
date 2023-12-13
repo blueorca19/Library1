@@ -4,20 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d08b9fcc-4f1d-4c3f-8bd0-7eb20247ae15" name="Changes" comment="update Customer CommonCustomer">
+    <list default="true" id="d08b9fcc-4f1d-4c3f-8bd0-7eb20247ae15" name="Changes" comment="Почти готово">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/ControllerBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ControllerBook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/ControllerCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ControllerCustomer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/ControllerMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ControllerMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/domain/CommonBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/CommonBook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/domain/CommonCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/CommonCustomer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/CommonSubscribe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/CommonSubscribe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/interfaces/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/interfaces/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/domain/interfaces/Subscribe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/interfaces/Subscribe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repositories/CommonCustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/CommonCustomerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repositories/interfaces/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/interfaces/CustomerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/CommonBookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/CommonBookRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/CommonCustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/CommonCustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/intefaces/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/intefaces/CustomerService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +85,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701854543509</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Почти готово">
+      <option name="closed" value="true" />
+      <created>1702464349036</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1702464349036</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -107,6 +109,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="Почти готово" />
+    <option name="LAST_COMMIT_MESSAGE" value="Почти готово" />
   </component>
 </project>

@@ -14,5 +14,7 @@ public interface Book {
 
     void setId(int id);
 
+    void setActive(boolean active);
+
 
 }

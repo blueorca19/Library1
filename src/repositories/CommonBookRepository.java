@@ -15,10 +15,15 @@ public class CommonBookRepository implements BookRepository {private Map<Integer
 
     public CommonBookRepository() {
         addBook("title1", "author1", 1991);
-        addBook("title2", "author2", 1992);
-        addBook("title3", "author3", 1993);
-        addBook("title4", "author4", 1994);
-        addBook("title5", "author5", 1995);
+        addBook("title2", "author1", 1991);
+        addBook("title3", "author2", 1992);
+        addBook("title4", "author2", 1992);
+        addBook("title5", "author3", 1993);
+        addBook("title6", "author3", 1993);
+        addBook("title7", "author4", 1994);
+        addBook("title8", "author4", 1995);
+        addBook("title9", "author5", 1995);
+        addBook("title10", "author5", 1995);
     }
 
 

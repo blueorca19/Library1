@@ -51,6 +51,11 @@ public class CommonBook implements Book {
     }
 
     @Override
+    public void setActive(boolean active) {
+        this.isActive = active;
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;

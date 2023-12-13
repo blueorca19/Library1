@@ -37,6 +37,8 @@ public class CommonCustomerService implements CustomerService {
         if (clientNumber < 0) {
             throw new IllegalArgumentException("Client's ID incorrect");
         }
+        customerRepository.getClientById(clientNumber).getCart().getBooks().forEach(x -> x.setActive(true));
+        customerRepository.getClientById(clientNumber).getCart().clear();
         customerRepository.getClientById(clientNumber).setActive(false);
 
     }
@@ -71,6 +73,12 @@ public class CommonCustomerService implements CustomerService {
         if (bookId < 0) {
             throw new IllegalArgumentException("Book's ID incorrect");
         }
+
+        if (!bookRepository.getBookById(bookId).isActive()) {
+            throw new IllegalArgumentException("Book is unavailable");
+        }
+        bookRepository.getBookById(bookId).setActive(false);
+        customerRepository.getClientById(clientNumber).getSubscribe().setActive(true);
         customerRepository.getClientById(clientNumber).getCart()
                 .addBook(bookRepository.getBookById(bookId));
 
@@ -87,7 +95,7 @@ public class CommonCustomerService implements CustomerService {
 
     @Override
     public boolean isCustomerCartEmpty(int clientNumber) {
-        if (clientNumber < 0 ) {
+        if (clientNumber < 0) {
             throw new IllegalArgumentException("Client's ID incorrect");
         }
         return customerRepository.getClientById(clientNumber).getCart().getBooks().isEmpty();
@@ -105,7 +113,7 @@ public class CommonCustomerService implements CustomerService {
 
     @Override
     public boolean isCustomerSubscribed(int clientNumber) {
-        if (clientNumber < 0 ) {
+        if (clientNumber < 0) {
             throw new IllegalArgumentException("Client's ID incorrect");
         }
         return customerRepository.getClientById(clientNumber).getSubscribe().isActive();
@@ -113,11 +121,11 @@ public class CommonCustomerService implements CustomerService {
 
     @Override
     public void subscribeCustomer(int clientNumber, int subscribeId) {
-        if (clientNumber < 0 ) {
+        if (clientNumber < 0) {
             throw new IllegalArgumentException("Client's ID incorrect");
 
         }
-        if (subscribeId < 0 ) {
+        if (subscribeId < 0) {
             throw new IllegalArgumentException("Subscribe's ID incorrect");
         }
 
@@ -132,17 +140,20 @@ public class CommonCustomerService implements CustomerService {
 
     @Override
     public void unsubscribeCustomer(int clientNumber) {
-        if (clientNumber < 0 ) {
+        if (clientNumber < 0) {
             throw new IllegalArgumentException("Client's ID incorrect");
 
         }
         customerRepository.getClientById(clientNumber).getSubscribe().setActive(false);
+        customerRepository.getClientById(clientNumber).getCart().getBooks().forEach(x -> x.setActive(true));
+        customerRepository.getClientById(clientNumber).getCart().clear();
+
 
     }
 
     @Override
     public double getRemainingSubscriptionTerm(int clientNumber) {
-        if (clientNumber < 0 ) {
+        if (clientNumber < 0) {
             throw new IllegalArgumentException("Client's ID incorrect");
 
         }
@@ -152,7 +163,7 @@ public class CommonCustomerService implements CustomerService {
 
     @Override
     public List<Customer> getListSubscribedCustomer(int subscribeId) {
-        if (subscribeId < 0 ) {
+        if (subscribeId < 0) {
             throw new IllegalArgumentException("Subscribe's ID incorrect");
         }
 

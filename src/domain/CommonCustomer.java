@@ -76,6 +76,6 @@ public class CommonCustomer implements Customer {
 
     @Override
     public String toString() {
-        return String.format("Клиент: ID - %d, Имя - %s, Подписка - %s, Активность %s" + "\n", clientNumber, name, subscribe.getName(), isActive ? "+" : "-");
+        return String.format("Клиент: ID - %d, Имя - %s, Подписка - %s%s , Активность %s" + "\n", clientNumber, name, subscribe.getName(), subscribe.isActive() ? "+" : "-", isActive ? "+" : "-");
     }
 }
