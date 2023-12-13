@@ -126,6 +126,11 @@ public class CommonCustomerService implements CustomerService {
     }
 
     @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    @Override
     public void unsubscribeCustomer(int clientNumber) {
         if (clientNumber < 0 ) {
             throw new IllegalArgumentException("Client's ID incorrect");
@@ -155,6 +160,11 @@ public class CommonCustomerService implements CustomerService {
                 .filter(x -> x.getSubscribe().equals(customerRepository.getSubscribeById(subscribeId)))
                 .collect(Collectors.toList());
 
+    }
+
+    @Override
+    public List<Subscribe> getAllSubscribes() {
+        return customerRepository.getAllSubscribes();
     }
 
 

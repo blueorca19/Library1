@@ -4,21 +4,20 @@ import domain.interfaces.Subscribe;
 
 public class CommonSubscribe implements Subscribe {
 
+
+    private int subscribeId;
     private String name;
 
     private boolean isActive;
 
-    private double price;
-
     private int term;
 
-    public CommonSubscribe(String name, double price, int term) {
+    public CommonSubscribe(int subscribeId, String name, int term) {
+        this.subscribeId = subscribeId;
         this.name = name;
-        this.price = price;
         this.term = term;
         this.isActive = false;
     }
-
 
 
     @Override
@@ -36,14 +35,14 @@ public class CommonSubscribe implements Subscribe {
         return isActive;
     }
 
-    @Override
-    public double getPrice() {
-        return price;
-    }
 
     @Override
     public void setActive(boolean active) {
-            this.isActive = active;
+        this.isActive = active;
     }
 
+    @Override
+    public String toString() {
+        return String.format("Подписка: ID - %d, Наименование - %s" + "\n", subscribeId, name);
+    }
 }

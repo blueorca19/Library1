@@ -35,5 +35,7 @@ public interface CustomerService {
 
     List<Customer> getListSubscribedCustomer(int customerId); //- для получения листа  покупателей, подписанного на определенный тариф.
 
+    List<Subscribe> getAllSubscribes();
+
 }
 

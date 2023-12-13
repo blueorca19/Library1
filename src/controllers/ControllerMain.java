@@ -54,35 +54,48 @@ public class ControllerMain {
                             controllerCustomer.addCustomer();
                             break;
                         case 2:
-                            controllerCustomer.addBookToCustomerCart();
+                            controllerCustomer.removeCustomer();
                             break;
                         case 3:
-                            result.addAll(controllerCustomer.getCustomerCart());
+                            result.addAll(controllerCustomer.getAllCustomers());
                             break;
                         case 4:
-                            controllerCustomer.isCustomerCartEmpty();
+                            result.addAll(controllerCustomer.getAllActiveCustomers());
                             break;
                         case 5:
-                            controllerCustomer.clearCustomerCart();
+                            result.addAll(controllerCustomer.getAllInactiveCustomers());
                             break;
                         case 6:
-                            controllerCustomer.isCustomerSubscribed();
+                            controllerCustomer.addBookToCustomerCart();
                             break;
                         case 7:
-                            controllerCustomer.subscribeCustomer();
+                            result.addAll(controllerCustomer.getCustomerCart());
                             break;
                         case 8:
-                            controllerCustomer.unsubscribeCustomer();
+                            result.add(controllerCustomer.isCustomerCartEmpty());
                             break;
                         case 9:
-                            result.add(controllerCustomer.getRemainingSubscriptionTerm());
+                            controllerCustomer.clearCustomerCart();
                             break;
                         case 10:
+                            result.add(controllerCustomer.isCustomerSubscribed());
+                            break;
+                        case 11:
+                            controllerCustomer.subscribeCustomer();
+                            break;
+                        case 12:
+                            controllerCustomer.unsubscribeCustomer();
+                            break;
+                        case 13:
+                            result.add(controllerCustomer.getRemainingSubscriptionTerm());
+                            break;
+                        case 14:
                             result.addAll(controllerCustomer.getListSubscribedCustomer());
                             break;
                     }
 
-            } return result;
+            }
+            return result;
         } catch (Exception e) {
             System.out.println("Произошла ошибка в главном контроллере ");
             throw new RuntimeException(e);

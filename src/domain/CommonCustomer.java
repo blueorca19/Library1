@@ -24,7 +24,6 @@ public class CommonCustomer implements Customer {
     }
 
 
-
     public String getName() {
         return name;
     }
@@ -77,9 +76,6 @@ public class CommonCustomer implements Customer {
 
     @Override
     public String toString() {
-        return "Читатель: {" +
-                "Имя - " + name + '\'' +
-                ", Номер читательского билета - " + clientNumber +
-                '}';
+        return String.format("Клиент: ID - %d, Имя - %s, Подписка - %s, Активность %s" + "\n", clientNumber, name, subscribe.getName(), isActive ? "+" : "-");
     }
 }

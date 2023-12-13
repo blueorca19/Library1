@@ -65,12 +65,6 @@ public class CommonBook implements Book {
 
     @Override
     public String toString() {
-        return "Книга:{" +
-                "Номер =" + id +
-                ", Наименование ='" + title + '\'' +
-                ", Автор ='" + author + '\'' +
-                ", Год =" + year +
-                ", Наличие =" + isActive +
-                '}' + "\n";
+        return String.format("Книга: ID - %d, Название - %s, Автор - %s, Год издания - %d, Активность %s" + "\n", id, title, author, year, isActive ? "+" : "-");
     }
 }

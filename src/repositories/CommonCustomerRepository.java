@@ -19,9 +19,9 @@ public class CommonCustomerRepository implements CustomerRepository {
 
 
     private List<Subscribe> subscribes = List.of(
-            new CommonSubscribe("Moth", 150, 1),
-            new CommonSubscribe("HalbYear", 550, 6),
-            new CommonSubscribe("Year", 1050, 12));
+            new CommonSubscribe(0,"Month",  1),
+            new CommonSubscribe(1,"HalfYear",  6),
+            new CommonSubscribe(2,"Year",  12));
 
     private int clientNumber;
 
@@ -43,13 +43,11 @@ public class CommonCustomerRepository implements CustomerRepository {
 
     @Override
     public void removeCustomer(int clientNumber) {
-
         customers.remove(clientNumber);
     }
 
     @Override
     public Customer getClientById(int clientNumber) {
-
         return customers.get(clientNumber);
     }
 
@@ -72,5 +70,10 @@ public class CommonCustomerRepository implements CustomerRepository {
     @Override
     public int getSizeCustomer() {
         return subscribes.size();
+    }
+
+    @Override
+    public List<Subscribe> getAllSubscribes() {
+        return subscribes;
     }
 }
