@@ -79,6 +79,7 @@ public class CommonCustomerService implements CustomerService {
         }
         bookRepository.getBookById(bookId).setActive(false);
         customerRepository.getClientById(clientNumber).getSubscribe().setActive(true);
+        customerRepository.getClientById(clientNumber).setActive(true);
         customerRepository.getClientById(clientNumber).getCart()
                 .addBook(bookRepository.getBookById(bookId));
 
@@ -107,6 +108,7 @@ public class CommonCustomerService implements CustomerService {
         if (clientNumber < 0) {
             throw new IllegalArgumentException("Client's ID incorrect");
         }
+        customerRepository.getClientById(clientNumber).getCart().getBooks().forEach(x -> x.setActive(true));
         customerRepository.getClientById(clientNumber).getCart().clear();
 
     }
