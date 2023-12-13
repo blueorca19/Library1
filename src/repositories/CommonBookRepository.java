@@ -26,6 +26,12 @@ public class CommonBookRepository implements BookRepository {private Map<Integer
     public List<Book> getAllBooks() {
         return new ArrayList<>(books.values());
     }
+
+    @Override
+    public int getSizeBook() {
+        return books.size();
+    }
+
     @Override
     public void addBook(String title, String author, int year) {
         Book book = new CommonBook(title, author, year);

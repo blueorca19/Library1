@@ -5,11 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d08b9fcc-4f1d-4c3f-8bd0-7eb20247ae15" name="Changes" comment="update">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/ControllerMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ControllerMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/CommonBookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/CommonBookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/ControllerBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ControllerBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/ControllerCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ControllerCustomer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/CommonCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/CommonCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/CommonCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/CommonCustomer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/interfaces/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/interfaces/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/interfaces/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/interfaces/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/CommonBookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/CommonBookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/CommonCustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/CommonCustomerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/interfaces/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/interfaces/BookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/interfaces/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/interfaces/CustomerRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/CommonCustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/CommonCustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/intefaces/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/intefaces/CustomerService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +55,26 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="application.Application" />
+      <module name="Library" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="application.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Application" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

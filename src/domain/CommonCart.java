@@ -14,8 +14,6 @@ public class CommonCart implements Cart {
     private int id;
     private List<Book> books = new ArrayList<>();
 
-    private Subscribe subscribe;
-
     public CommonCart(int id) {
         this.id = id;
 
@@ -61,11 +59,6 @@ public class CommonCart implements Cart {
         return false;
     }
 
-    //todo Дописать методы
-    @Override
-    public double getPrice() {
-        return subscribe.getPrice();
-    }
 
     @Override
     public void clear() {

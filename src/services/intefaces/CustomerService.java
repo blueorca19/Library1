@@ -10,6 +10,12 @@ import java.util.List;
 public interface CustomerService {
     void addCustomer(String customerName, int subscribeId);
 
+    void removeCustomer(int clientNumber);
+    List<Customer> getAllCustomers();
+    List<Customer> getAllActiveCustomers();
+    List<Customer> getAllInactiveCustomers();
+
+
     void addBookToCustomerCart(int clientNumber, int bookId); // для добавления книги в корзину покупателя.
 
     List<Book> getCustomerCart(int customerId); // для получения списка книг в корзине покупателя.

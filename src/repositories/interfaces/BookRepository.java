@@ -11,5 +11,7 @@ public interface BookRepository {
     Book getBookById(int bookId);
     List<Book> getAllBooks();
 
+    int getSizeBook();
+
 
 }

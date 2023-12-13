@@ -18,12 +18,11 @@ public class CommonCustomer implements Customer {
     public CommonCustomer(String name, int clientNumber, Subscribe subscribe, Cart cart) {
         this.name = name;
         this.clientNumber = clientNumber;
-        setClientNumber(clientNumber);
         this.subscribe = subscribe;
-        this.subscribe.setActive(true);
         this.cart = cart;
         this.isActive = true;
     }
+
 
 
     public String getName() {
@@ -47,6 +46,16 @@ public class CommonCustomer implements Customer {
     @Override
     public void setSubscribe(Subscribe subscribe) {
         this.subscribe = subscribe;
+    }
+
+    @Override
+    public void setActive(boolean active) {
+        this.isActive = active;
+    }
+
+    @Override
+    public boolean isActive() {
+        return isActive;
     }
 
     public void setClientNumber(int clientNumber) {

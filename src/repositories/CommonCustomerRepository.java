@@ -17,6 +17,7 @@ public class CommonCustomerRepository implements CustomerRepository {
 
     private Map<Integer, Customer> customers = new HashMap<>();
 
+
     private List<Subscribe> subscribes = List.of(
             new CommonSubscribe("Moth", 150, 1),
             new CommonSubscribe("HalbYear", 550, 6),
@@ -42,11 +43,13 @@ public class CommonCustomerRepository implements CustomerRepository {
 
     @Override
     public void removeCustomer(int clientNumber) {
+
         customers.remove(clientNumber);
     }
 
     @Override
     public Customer getClientById(int clientNumber) {
+
         return customers.get(clientNumber);
     }
 
@@ -57,6 +60,17 @@ public class CommonCustomerRepository implements CustomerRepository {
 
     @Override
     public Subscribe getSubscribeById(int subscribeId) {
-        return subscribes.get(subscribeId) ;
+
+        return subscribes.get(subscribeId);
+    }
+
+    @Override
+    public int getSizeSubscribe() {
+        return subscribes.size();
+    }
+
+    @Override
+    public int getSizeCustomer() {
+        return subscribes.size();
     }
 }

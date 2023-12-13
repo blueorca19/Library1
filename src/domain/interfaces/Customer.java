@@ -11,5 +11,8 @@ public interface Customer {
     Subscribe getSubscribe();
 
     void setSubscribe(Subscribe subscribe);
+    void setActive(boolean active);
+
+    boolean isActive();
 
 }

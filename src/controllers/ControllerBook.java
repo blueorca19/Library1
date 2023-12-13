@@ -24,6 +24,7 @@ public class ControllerBook {
             String author = scanner.nextLine();
             System.out.println("Введите год издания: ");
             int year = Integer.parseInt(scanner.nextLine());
+            service.addBook(title,author,year);
 
         } catch (Exception e) {
             throw new RuntimeException(e);
